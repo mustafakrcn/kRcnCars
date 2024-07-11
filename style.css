@@ -1,0 +1,335 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+
+}
+
+body{
+   
+    background: #eaeaea;
+    overflow: hidden;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-image: url(https://uhdwallpapers.org/uploads/converted/19/01/05/ford-mustang-supercar-3840x2160_578895-rm-90.webp);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+
+}
+
+.menu-bar{
+
+    text-align: center;
+    
+    
+}
+.menu-bar ul {
+    display: inline-flex;
+    list-style: none;
+
+}
+ .menu-bar ul li{
+    width: 150px;
+    margin: 15px;
+    padding: 15px;
+    
+}
+.menu-bar ul li a{
+    text-decoration: none;
+    color: red;
+ }
+.active, .menu-bar ul li:hover{
+    background:black;
+    border-radius: 10px;
+}
+
+.menu-bar .fas{
+    margin-right: 8px;
+}
+
+/*card galeri */
+
+.container{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    height: 600px;
+    background: #f5f5f5;
+    box-shadow: 0 10px 10px #dbdbdb;
+    border-radius: 60px;
+    
+    
+}
+
+.container .slide .item{
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    border-radius: 30px;
+    box-shadow: 0 30px 50px #505050;
+    background-position: 50% 50%;
+    background-size: cover;
+    display: inline-block;
+    transition: 0.5s;
+    
+
+}
+
+.slide .item:nth-child(1),
+.slide .item:nth-child(2){
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    border-radius: 50px;
+    width: 100%;
+    height: 100%;
+}
+
+
+.slide .item:nth-child(3){
+    left: 50%;
+}
+.slide .item:nth-child(4){
+    left: calc(50% + 220px);
+}
+.slide .item:nth-child(5){
+    left: calc(50% + 440px);
+}
+
+/* here n = 0, 1, 2, 3,... */
+.slide .item:nth-child(n + 6){
+    left: calc(50% + 660px);
+    opacity: 0;
+}
+
+
+
+.item .content{
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    width: 300px;
+    text-align: left;
+    color: #eee;
+    transform: translate(0, -50%);
+    font-family: system-ui;
+    display: none;
+}
+
+
+.slide .item:nth-child(2) .content{
+    display: block;
+}
+
+
+.content .name{
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: 0;
+    animation: animate 1s ease-in-out 1 forwards;
+    color: darkred;
+    text-shadow: 0 0 5px rgba(3, 3, 3, 1);
+}
+
+.content .note{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.3s 1 forwards;
+    color:darkgray;
+    text-shadow: 0 0 5px rgba(3, 3, 3, 5);
+    font-weight: 900;
+    font-size: large;
+}
+
+
+.content button{
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.6s 1 forwards;
+}
+
+
+@keyframes animate {
+    from{
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(33px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0);
+    }
+}
+
+
+
+.button{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 30px;
+    
+}
+
+.button button{
+    
+    margin: 0 7px;
+    transition: 0.4s;
+    border-width: 7px;
+    border-radius: 70px;
+    border-color:white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+.button button :hover{
+    
+    color:red ;
+}
+
+.btn {
+    background-color:darkred;
+    color: black;
+    font-size: large;
+}
+  /* KİRALA sayfası için*/
+
+  .table{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+ 
+
+    
+}
+.h{
+    
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+ 
+}
+    
+.a{
+    background-color: rgb(248, 2, 2);
+    width: 120px;
+    height: 40px;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: large;
+}
+
+
+.icona{
+    position: absolute;
+    top: 90%;
+    left:70%;
+    font-size: xx-large;
+    color: aqua;
+    background-color: transparent;
+    border:none;
+}
+.icona:hover{
+    text-shadow: 0 0 25px aqua;
+    cursor: pointer;
+}
+
+
+.iconb{
+    position: absolute;
+    top: 90%;
+    left:60%;
+    font-size: xx-large;
+    color:darkblue;
+    background-color: transparent;
+    border:none;
+}
+.iconb:hover{
+    text-shadow: 0 0 25px blue;
+    cursor: pointer;
+}
+
+
+.iconc{
+    position: absolute;
+    top: 90%;
+    left:50%;
+    font-size: xx-large;
+    background-color: transparent;
+    border:none;
+ }
+.iconc:hover{
+    text-shadow: 0 0 20px white;
+    cursor: pointer;
+} 
+
+
+.icond{
+    position: absolute;
+    top: 90%;
+    left: 40%;
+    font-size: xx-large;
+    background-color: transparent;
+    border:none; 
+    color: palevioletred;
+}
+.icond:hover{
+    text-shadow: 0 0 25px lightcoral;
+    cursor: pointer;
+}
+
+
+.iconf{
+    position: absolute;
+    top: 90%;
+    left: 30%;
+    font-size: xx-large;
+    background-color: transparent;
+    border:none;
+    color: darkgreen;
+}
+.iconf:hover{
+    text-shadow: 0 0 25px lawngreen;
+    cursor: pointer;
+}
+
+ 
+/* giriş yazısı için*/
+.welcome{
+    
+    width: 20%;
+    position: absolute;
+    top: 15%;
+    left: 2%;
+    color:darkgray;
+    text-shadow: 0 0 5px rgba(3, 3, 3, 5);
+    font-weight: 900;
+    font-size: large;
+}
+ 
+.lg{
+    
+    position: absolute;
+    left: 50%;
+}
